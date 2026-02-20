@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEYBOARD CLASH | Typing Speed Test</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/background.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body oncontextmenu="return false;">
+
+  <!-- Floating background decorations -->
+  <div class="decoration star-1">⭐</div>
+  <div class="decoration star-2">⭐</div>
+  <div class="decoration heart-1">💙</div>
+  <div class="decoration heart-2">💚</div>
+
+  <div class="container">
+
+    <!-- Pixel corners -->
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+
+    <!-- Characters — put your images in assets/characters/ -->
+    <img src="assets/characters/left.png"      class="character-left"      alt="Left Character">
+    <img src="assets/characters/right.png"     class="character-right"     alt="Right Character">
+    <img src="assets/characters/top_left.png"  class="character-top-left"  alt="Top Left Mascot">
+    <img src="assets/characters/top_right.png" class="character-top-right" alt="Top Right Mascot">
+
+    <!-- Interior decorations -->
+    <div class="emoji-decor emoji-1">⭐</div>
+    <div class="emoji-decor emoji-2">💚</div>
+
+    <h1>KEYBOARD CLASH</h1>
+
+    <!-- ══════════════════════════════════════
+         TYPING PAGE — shown on load
+    ══════════════════════════════════════ -->
+    <div id="typing-page" style="display:none;">
+      <p class="subtitle">— type the paragraph below —</p>
+
+      <!-- Countdown timer -->
+      <div class="timer" id="timer">02:00</div>
+
+      <!-- The paragraph to type -->
+      <div id="textDisplay"></div>
+
+      <!-- Typing area -->
+      <textarea id="typingArea" placeholder="Start typing here — timer begins on your first keystroke..."></textarea>
+
+      <!-- Done early button -->
+      <div class="btn-row">
+        <button class="btn-primary" onclick="finishEarly()">✅ Done</button>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         RESULT PAGE — shown after test ends
+    ══════════════════════════════════════ -->
+    <div id="result-page" style="display:none;">
+      <h2>🏆 Your Results</h2>
+      <p id="wpm"      class="result-box wpm-box"></p>
+      <p id="accuracy" class="result-box"></p>
+      <p id="errors"   class="result-box"></p>
+
+      <div class="btn-row">
+        <button class="btn-primary" onclick="tryAgain()">🔄 Try Again</button>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+
+  <!-- JS — order matters, don't rearrange -->
+  <script src="js/paragraphs.js"></script>  <!-- paragraph list -->
+  <script src="js/timer.js"></script>        <!-- countdown logic -->
+  <script src="js/scoring.js"></script>      <!-- WPM calculation -->
+  <script src="js/app.js"></script>          <!-- main flow -->
+  <script src="js/typing.js"></script>       <!-- keydown + paste lock -->
+</body>
+</html>

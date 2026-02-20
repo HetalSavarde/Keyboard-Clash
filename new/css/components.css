@@ -1,0 +1,210 @@
+/* ============================================================
+   components.css — All UI elements
+   Edit this file to restyle buttons, inputs, timer, results
+   ============================================================ */
+
+/* --- Headings --- */
+h1 {
+  text-align: center;
+  color: #2ecc71;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 42px;
+  margin: 0 0 10px 0;
+  text-shadow:
+    3px 3px 0px #0a3d1f,
+    -1px -1px 0px #5dade2;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  color: #5dade2;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 2px 2px 0px #0a1a2e;
+}
+
+label {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: #85c1e9;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+/* --- Subtitle / para label --- */
+.subtitle {
+  text-align: center;
+  color: #5dade2;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 11px;
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+
+/* --- Reference text display --- */
+#textDisplay {
+  background: #060d1a;
+  padding: 25px 30px;
+  border: 3px solid #1a6b4a;
+  border-radius: 10px;
+  line-height: 2;
+  user-select: none;
+  font-family: 'VT323', monospace;
+  font-size: 26px;
+  color: #85c1e9;
+  letter-spacing: 1px;
+  box-shadow: inset 0 0 30px rgba(26, 107, 74, 0.15);
+  margin-bottom: 20px;
+  min-height: 100px;
+}
+
+/* --- Timer --- */
+.timer {
+  font-size: 52px;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  margin: 0 0 20px 0;
+  color: #2ecc71;
+  text-shadow:
+    2px 2px 0px #0a3d1f,
+    0 0 20px rgba(46, 204, 113, 0.4);
+  letter-spacing: 6px;
+  background: #060d1a;
+  padding: 18px;
+  border: 3px solid #1a6b4a;
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px rgba(46, 204, 113, 0.1);
+}
+
+/* Timer turns red when under 10 seconds */
+.timer.warning {
+  color: #e74c3c;
+  border-color: #7b241c;
+  text-shadow: 2px 2px 0px #7b241c, 0 0 20px rgba(231, 76, 60, 0.5);
+}
+
+/* --- Typing area --- */
+#typingArea {
+  width: 100%;
+  height: 160px;
+  padding: 15px;
+  font-size: 22px;
+  font-family: 'VT323', monospace;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  resize: none;
+  background: #060d1a;
+  color: #2ecc71;
+  border: 3px solid #1a4a6b;
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px rgba(93, 173, 226, 0.1);
+  margin: 0;
+}
+
+#typingArea:focus {
+  outline: none;
+  border-color: #2ecc71;
+  box-shadow: inset 0 0 20px rgba(46, 204, 113, 0.15), 0 0 15px rgba(46, 204, 113, 0.2);
+}
+
+/* --- Buttons --- */
+button {
+  padding: 16px 40px;
+  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.1s;
+  display: inline-block;
+  margin: 10px;
+  font-weight: bold;
+}
+
+/* Primary button — green */
+.btn-primary {
+  background: linear-gradient(180deg, #27ae60 0%, #1e8449 100%);
+  color: #fff;
+  border: 4px solid #0a3d1f;
+  box-shadow: 0 5px 0 #0a3d1f, 0 7px 15px rgba(0,0,0,0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(180deg, #2ecc71 0%, #27ae60 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #0a3d1f, 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #0a3d1f;
+}
+
+/* Secondary button — blue */
+.btn-secondary {
+  background: linear-gradient(180deg, #2e86c1 0%, #1a5276 100%);
+  color: #fff;
+  border: 4px solid #0a1a2e;
+  box-shadow: 0 5px 0 #0a1a2e, 0 7px 15px rgba(0,0,0,0.4);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(180deg, #5dade2 0%, #2e86c1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #0a1a2e, 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.btn-secondary:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #0a1a2e;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* --- Result boxes --- */
+.result-box {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  margin: 16px 0;
+  padding: 20px 25px;
+  background: #060d1a;
+  border: 3px solid #1a6b4a;
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px rgba(26, 107, 74, 0.15);
+  color: #85c1e9;
+  text-align: center;
+}
+
+.result-box.wpm-box {
+  font-size: 28px;
+  border-color: #2ecc71;
+  color: #2ecc71;
+  text-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+  box-shadow: inset 0 0 30px rgba(46, 204, 113, 0.15), 0 5px 0 #0a3d1f;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+  .character-left,
+  .character-right,
+  .character-top-left,
+  .character-top-right {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 26px; }
+  h2 { font-size: 16px; }
+  .timer { font-size: 36px; }
+  button { font-size: 13px; padding: 12px 20px; }
+  .container { padding: 20px 16px; }
+}
