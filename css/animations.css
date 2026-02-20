@@ -1,0 +1,54 @@
+/* ============================================================
+   animations.css — All animations and floating decorations
+   Edit this file to change speeds or remove effects
+   ============================================================ */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+
+.decoration {
+  position: fixed;
+  font-size: 36px;
+  animation: float 3s ease-in-out infinite;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.star-1  { top: 10%; left:  5%;  animation-delay: 0s; }
+.star-2  { top: 15%; right: 8%;  animation-delay: 1s; }
+.heart-1 { top: 25%; left:  10%; animation-delay: 0.5s; }
+.heart-2 { top: 20%; right: 15%; animation-delay: 1.5s; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-12px) rotate(4deg); }
+}
+
+.emoji-decor {
+  animation: bounce 2.5s ease-in-out infinite;
+}
+
+.emoji-1 { animation-delay: 0s; }
+.emoji-2 { animation-delay: 0.6s; }
+
+/* Timer warning pulse */
+@keyframes pulse-warning {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+.timer.warning {
+  animation: pulse-warning 0.7s ease-in-out infinite;
+}
+
+/* Page fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#typing-page, #result-page {
+  animation: fadeIn 0.3s ease-out;
+}

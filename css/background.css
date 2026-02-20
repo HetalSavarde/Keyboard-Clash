@@ -1,0 +1,30 @@
+/* ============================================================
+   background.css — Page background and body base styles
+   Edit this file to change the background colour or add image
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0f1e 0%, #0d2137 50%, #0a1a2e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ADD YOUR BACKGROUND IMAGE HERE — uncomment below:
+body {
+  background-image: url('../assets/your-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+*/
